@@ -37,3 +37,4 @@ export default function RTE({ name, control, label, defaultValue = "Welcome" }) 
     </div>
   )
 }
+
