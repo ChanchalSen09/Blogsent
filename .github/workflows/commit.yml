@@ -1,0 +1,9 @@
+- name: Commit and push changes
+  env:
+    GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+  run: |
+    git config --global user.email "bkchanchalsen@gmail.com"
+    git config --global user.name "ChanchalSen09"
+    git add .
+    git commit -m "Daily Commit $(date)" || exit 0
+    git push https://x-access-token:${GITHUB_TOKEN}@github.com/ChanchalSen09/Blogsent.git
